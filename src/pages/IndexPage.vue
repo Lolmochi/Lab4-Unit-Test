@@ -2,9 +2,12 @@
   <div class="htmlClass">
     <h1>{{ title }}</h1>
     <form>
-      <input type="text" id="firstValue" v-model="firstValue" />
+      <input type="text" id="firstValue"  v-model="firstValue" />
       <input type="text" id="secondValue" v-model="secondValue" />
       <input type="text" id="answerVulue" v-model="answerVulue" />
+      <input type="text" id="fistname"    v-model="fistname" />
+      <input type="text" id="lastname"    v-model="lastname" />
+      <input type="text" id="id"          v-model="id" />
       <button @click="addition(firstValue,secondValue)" >Addition</button>
       <button @click="subtraction(firstValue,secondValue)" >Subtraction</button>
       <button @click="multiplication(firstValue,secondValue)" >Multiplication</button>
@@ -18,10 +21,13 @@ export default {
   name: 'HtmlComponent',
   data() {
     return {
-      title: 'Adison Wongkham 6404101350',
+      title: 'Vue is awesome.',
       firstValue:0,
       secondValue:0,
-      answerVulue:0
+      answerVulue:0,
+      fistname:"Adison",
+      lastname:"Wongkham",
+      id:"6404101350"
     }
   },
   methods: {

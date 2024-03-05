@@ -1,13 +1,20 @@
 import FunctionPage from 'src/pages/FunctionPage.vue'
 import { shallowMount } from '@vue/test-utils'
 
+test("name Adison WongKham 6404101350 variable on file",()=>{ 
+  const wrapper = shallowMount(FunctionPage)
+  expect(wrapper.find("#fistname").element.Value).tobe ("Adison")
+  expect(wrapper.find("#lastname").element.Value).tobe ("Wongkham")
+  expect(wrapper.find("#id").element.Value).tobe ("6404101350")
+})
+
 describe('IndexPage', () => {
   it('should render correct contents', () => {
     const wrapper = shallowMount(FunctionPage)
     let header = wrapper.find('.htmlClass h1')
     expect(header.exists()).toBe(true)
     expect(header.text())
-      .toBe('Adison Wongkham 6404101350')
+      .toBe('Vue is awesome.')
   })
 })
 
